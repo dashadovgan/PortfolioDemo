@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f7;
+  --color-surface-dim: #e4d7d7;
+  --color-surface-bright: #fff8f7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fef0f0;
+  --color-surface-container: #f9ebeb;
+  --color-surface-container-high: #f3e5e5;
+  --color-surface-container-highest: #eddfdf;
+  --color-on-surface: #211a1a;
+  --color-on-surface-variant: #5d3f44;
+  --color-inverse-surface: #362f2f;
+  --color-inverse-on-surface: #fbeeee;
+  --color-outline: #916e73;
+  --color-outline-variant: #e6bcc2;
+  --color-surface-tint: #7214ff;
+  --color-primary: #6f02ff;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #864dff;
+  --color-on-primary-container: #fffbff;
+  --color-inverse-primary: #d0bcff;
+  --color-secondary: #7a4c8c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ecb6fe;
+  --color-on-secondary-container: #6f4281;
+  --color-tertiary: #7245a7;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #8c5fc2;
+  --color-on-tertiary-container: #fffbff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #d0bcff;
+  --color-on-primary-fixed: #23005c;
+  --color-on-primary-fixed-variant: #5600ca;
+  --color-secondary-fixed: #f8d8ff;
+  --color-secondary-fixed-dim: #e9b3fb;
+  --color-on-secondary-fixed: #310344;
+  --color-on-secondary-fixed-variant: #603472;
+  --color-tertiary-fixed: #eedbff;
+  --color-tertiary-fixed-dim: #dab9ff;
+  --color-on-tertiary-fixed: #2a0053;
+  --color-on-tertiary-fixed-variant: #5b2e90;
+  --color-background: #fff8f7;
+  --color-on-background: #211a1a;
+  --color-surface-variant: #eddfdf;
+
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --font-jost: "Jost", sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Jost:wght@400;500;600&display=swap');
+
+@layer base {
+  body {
+    @apply font-jost bg-background text-on-background;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(111, 2, 255, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(233, 179, 251, 0.1) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-ubuntu;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(59, 2, 112, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(111, 0, 255, 0.1);
+}
+
+.ambient-shadow {
+  box-shadow: 0 20px 40px rgba(111, 0, 255, 0.15);
+}
